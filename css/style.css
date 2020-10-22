@@ -1,12 +1,20 @@
 .game {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
+}
+
+.hud {
+    width: 960px;
+    height: 100px;
+    background-color: #cecece;
+    margin: 0 auto;
 }
 
 .palco {
     width: 960px;
     height: 500px;
     background-color: #000000;
-    margin: auto;
+    margin: 0 auto;
 }

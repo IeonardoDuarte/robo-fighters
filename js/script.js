@@ -1,6 +1,8 @@
 window.onload = function () {
     let canvas = document.querySelector('.palco');
     let ctx = canvas.getContext("2d");
+    let vidaJogador1 = document.querySelector('.jogador1_vida');
+    let vidaJogador2 = document.querySelector('.jogador2_vida');
 
     class ObjRetangular {
         static objRetangulares = [];
@@ -100,8 +102,10 @@ window.onload = function () {
     function animar() {
         if (jogador1.colisao(jogador2.vertices) || jogador2.colisao(jogador1.vertices)) {
             // TODO - Colocar animação de impcto
-            // TODO - Computar dano e número de impactos
+            // TODO - Computar número de impactos
 
+            jogador1.vida -= intRandom(0, 20);
+            jogador2.vida -= intRandom(0, 20);
 
             jogador1.reposicionar();
             jogador2.reposicionar();
@@ -116,6 +120,9 @@ window.onload = function () {
                 jogador1.andar(movimento(tecla, 1));
                 jogador2.andar(movimento(tecla, 2));
             });
+
+            vidaJogador1.innerHTML = `Jogador 1 - ${jogador1.vida} / 100 HP`;
+            vidaJogador2.innerHTML = `Jogador 2 - ${jogador2.vida} / 100 HP`;
 
             jogador1.desenhar();
             jogador2.desenhar();
@@ -153,9 +160,9 @@ window.onload = function () {
         }
     }
 
-    // function reiniciaRodada() { // TODO
-    //     jogador1
-    // }
+    function intRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     let tamanhoJogadores = 20;
 
