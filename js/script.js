@@ -7,9 +7,7 @@ window.onload = function () {
     let resultado = document.querySelector('.resultado');
 
     class ObjRetangular {
-        static objRetangulares = [];
         constructor(x, y, largura, altura, cor) {
-            ObjRetangular.objRetangulares.push(this);
             this.x = x;
             this.y = y;
             this.largura = largura;
@@ -38,7 +36,7 @@ window.onload = function () {
         colisao(vertices) {
             let colidiu = false;
             vertices.forEach(v => {
-                if (v.x > this.x && v.x < this.x + this.largura && v.y > this.y && v.y < this.y + this.altura) {
+                if (v.x >= this.x && v.x <= this.x + this.largura && v.y >= this.y && v.y <= this.y + this.altura) {
                     colidiu = true;
                 }
             });
@@ -68,30 +66,24 @@ window.onload = function () {
                 x: this.x,
                 y: this.y + this.altura
             }];
-            let colidiu = false;
-            ObjRetangular.objRetangulares.forEach(obj => {
-                colidiu = obj.colisao(this.vertices);
-            })
-            if (!colidiu) {
-                let vel = 1;
-                switch (direcao) {
-                    case 'esquerda':
-                        if (this.x >= 0)
-                            this.x -= vel;
-                        break;
-                    case 'baixo':
-                        if (this.y + this.altura <= canvas.height)
-                            this.y += vel;
-                        break;
-                    case 'direita':
-                        if (this.x + this.largura <= canvas.width)
-                            this.x += vel;
-                        break;
-                    case 'cima':
-                        if (this.y >= 0)
-                            this.y -= vel;
-                        break;
-                }
+            let vel = 1;
+            switch (direcao) {
+                case 'esquerda':
+                    if (this.x >= 0)
+                        this.x -= vel;
+                    break;
+                case 'baixo':
+                    if (this.y + this.altura <= canvas.height)
+                        this.y += vel;
+                    break;
+                case 'direita':
+                    if (this.x + this.largura <= canvas.width)
+                        this.x += vel;
+                    break;
+                case 'cima':
+                    if (this.y >= 0)
+                        this.y -= vel;
+                    break;
             }
         }
 
