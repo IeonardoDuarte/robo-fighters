@@ -1,0 +1,12 @@
+.game {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.palco {
+    width: 960px;
+    height: 500px;
+    background-color: #000000;
+    margin: auto;
+}
