@@ -90,6 +90,19 @@ window.onload = function () {
         reposicionar() {
             this.x = this.xInicial;
             this.y = this.yInicial;
+            this.vertices = [{
+                x: this.x,
+                y: this.y
+            }, {
+                x: this.x + this.largura,
+                y: this.y
+            }, {
+                x: this.x + this.largura,
+                y: this.y + this.altura
+            }, {
+                x: this.x,
+                y: this.y + this.altura
+            }];
         }
     }
 
