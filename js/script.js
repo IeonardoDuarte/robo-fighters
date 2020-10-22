@@ -47,6 +47,7 @@ window.onload = function () {
             super(x, y, largura, altura, cor);
             this.xInicial = x;
             this.yInicial = y;
+            this.vida = 100;
         }
 
         andar(direcao) {
@@ -101,6 +102,7 @@ window.onload = function () {
             // TODO - Colocar animação de impcto
             // TODO - Computar dano e número de impactos
 
+
             jogador1.reposicionar();
             jogador2.reposicionar();
 
@@ -114,6 +116,7 @@ window.onload = function () {
                 jogador1.andar(movimento(tecla, 1));
                 jogador2.andar(movimento(tecla, 2));
             });
+
             jogador1.desenhar();
             jogador2.desenhar();
         }
@@ -167,7 +170,7 @@ window.onload = function () {
     }
 
     const jogador1 = new Jogador(posIniJog1.x, posIniJog1.y, tamanhoJogadores, tamanhoJogadores, 'blue');
-    const jogador2 = new Jogador(posIniJog2.x, posIniJog2.y, tamanhoJogadores, tamanhoJogadores, 'green');
+    const jogador2 = new Jogador(posIniJog2.x, posIniJog2.y, tamanhoJogadores, tamanhoJogadores, 'orange');
 
     let teclas = [];
     addEventListener('keydown', evento => {
