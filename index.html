@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script src="./js/script.js"></script>
     <title>Robo Fighters</title>
 </head>
@@ -13,17 +14,46 @@
 <body>
     <div class="game">
         <div class="hud">
-            <div class="jogador1-infos">
-                <p class="jogador1_vida"></p>
+
+
+
+            <div class="jogadores">
+
+
+
+
+
+                <div class="vidas">
+                    <div class="barra-esquerda">
+                        <p class="jogador1_vida"></p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100">50%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="jogador2_vida"></p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100">50%
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <p class="impactos"></p>
+                    <p class="resultado"></p>
+                </div>
+
+
+                <canvas class="palco"></canvas>
             </div>
-            <p class="impactos"></p>
-            <div class="jogador2-infos">
-                <p class="jogador2_vida"></p>
-            </div>
-            <p class="resultado"></p>
         </div>
-        <canvas class="palco"></canvas>
-    </div>
 </body>
 
 </html>

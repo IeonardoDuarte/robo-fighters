@@ -10,6 +10,7 @@
     height: 100px;
     background-color: #cecece;
     margin: 0 auto;
+    text-align: center;
 }
 
 .palco {
@@ -17,4 +18,18 @@
     height: 500px;
     background-color: #000000;
     margin: 0 auto;
+}
+
+
+.vidas{
+display: flex;
+justify-content: space-between;
+}
+
+.barra-left{
+text-align: left;
+}
+
+.barra-right{
+text-align: right;
 }

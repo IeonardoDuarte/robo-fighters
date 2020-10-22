@@ -183,9 +183,9 @@ window.onload = function () {
     }
 
     function atualizaHud() {
-        vidaJogador1.innerHTML = `Jogador 1 - ${jogador1.vida} / 100 HP`;
-        vidaJogador2.innerHTML = `Jogador 2 - ${jogador2.vida} / 100 HP`;
-        placarImpactos.innerHTML = `Quantidade de impactos - ${impactos}`;
+        vidaJogador1.innerHTML = `Jogador 1 ${jogador1.vida}`;
+        vidaJogador2.innerHTML = `Jogador 2 ${jogador2.vida}`;
+        placarImpactos.innerHTML = `Impactos ${impactos}`;
     }
 
     let tamanhoJogadores = 20;
