@@ -1,8 +1,8 @@
 window.onload = function () {
     let canvas = document.querySelector('.palco');
     let ctx = canvas.getContext("2d");
-    let vidaJogador1 = document.querySelector('.jogador1_vida');
-    let vidaJogador2 = document.querySelector('.jogador2_vida');
+    let vidaJogador1 = document.querySelector('.barra-vida-jogador1');
+    let vidaJogador2 = document.querySelector('.barra-vida-jogador2');
     let placarImpactos = document.querySelector('.impactos');
     let resultado = document.querySelector('.resultado');
 
@@ -183,8 +183,10 @@ window.onload = function () {
     }
 
     function atualizaHud() {
-        vidaJogador1.innerHTML = `Jogador 1 ${jogador1.vida}`;
-        vidaJogador2.innerHTML = `Jogador 2 ${jogador2.vida}`;
+        vidaJogador1.style = `width: ${jogador1.vida}%`
+        vidaJogador1.innerHTML = `${jogador1.vida}%`
+        vidaJogador2.style = `width: ${jogador2.vida}%`
+        vidaJogador2.innerHTML = `${jogador2.vida}%`
         placarImpactos.innerHTML = `Impactos ${impactos}`;
     }
 

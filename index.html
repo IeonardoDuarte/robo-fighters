@@ -14,46 +14,37 @@
 <body>
     <div class="game">
         <div class="hud">
-
-
-
-            <div class="jogadores">
-
-
-
-
-
-                <div class="vidas">
-                    <div class="barra-esquerda">
-                        <p class="jogador1_vida"></p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100">50%
-                            </div>
+            <div class="vidas">
+                <div class="jogadores-info">
+                    <div class="jogador1">
+                        <p>Jogador 1</p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar barra-vida-jogador1" role="progressbar" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
                         </div>
                     </div>
-
-                    <div>
-                        <p class="jogador2_vida"></p>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100">50%
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-                    <p class="impactos"></p>
-                    <p class="resultado"></p>
                 </div>
 
-
-                <canvas class="palco"></canvas>
+                <div class="jogadores-info">
+                    <div class="jogador2">
+                        <p>jogador 2</p>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning barra-vida-jogador2" role="progressbar" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="placar-impactos">
+                <p class="impactos"></p>
+            </div>
+            <div class="placar-resultado">
+                <p class="resultado"></p>
             </div>
         </div>
+        <canvas class="palco"></canvas>
 </body>
 
 </html>

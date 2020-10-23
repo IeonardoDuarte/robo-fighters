@@ -7,10 +7,33 @@
 
 .hud {
     width: 960px;
-    height: 100px;
+    height: 120px;
     background-color: #cecece;
     margin: 0 auto;
-    text-align: center;
+}
+
+.vidas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jogadores-info {
+    width: 30%;
+}
+
+.jogador1 {
+    text-align: right;
+}
+
+.placar-impactos,
+.placar-resultado {
+    display: flex;
+    justify-content: center;
+}
+
+.impactos,
+.resultado {
+    margin: 0;
 }
 
 .palco {
@@ -18,18 +41,4 @@
     height: 500px;
     background-color: #000000;
     margin: 0 auto;
-}
-
-
-.vidas{
-display: flex;
-justify-content: space-between;
-}
-
-.barra-left{
-text-align: left;
-}
-
-.barra-right{
-text-align: right;
 }
