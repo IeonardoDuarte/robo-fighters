@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road&display=swap');
+
+p{
+    font-family: 'Turret Road', cursive;
+    color: #ffffff;
+}
+
+
+.game{
+    /* Gradiente de cores */
+    background: rgb(107,13,156);
+    background: linear-gradient(153deg, rgba(107,13,156,1) 0%, rgba(75,87,177,1) 50%, rgba(28,198,207,1) 100%);
+}
+
+
 .game {
     display: flex;
     flex-direction: column;
@@ -8,7 +23,8 @@
 .hud {
     width: 960px;
     height: 120px;
-    background-color: #cecece;
+    background: rgb(0,25,255);
+    background: linear-gradient(90deg, rgb(31 58 255) 0%, rgba(255,134,0,1) 100%);
     margin: 0 auto;
 }
 
@@ -18,11 +34,15 @@
 }
 
 .jogadores-info {
+    margin: 3vh 3vh 0 3vh;
     width: 30%;
 }
 
-.jogador1 {
-    text-align: right;
+.jogador1 p{
+    text-align: center;
+}
+.jogador2 {
+    text-align: center;
 }
 
 .placar-impactos,
@@ -41,4 +61,9 @@
     height: 500px;
     background-color: #000000;
     margin: 0 auto;
+    /* Sombra da div */
+    -webkit-box-shadow: 13px 18px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 18px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 13px 18px 17px 0px rgba(0,0,0,0.75);
+
 }
