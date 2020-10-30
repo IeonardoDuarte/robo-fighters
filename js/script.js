@@ -34,12 +34,13 @@ window.onload = function () {
         }
 
         colisao(vertices) {
+            let colidiu = false;
             vertices.forEach(v => {
                 if (v.x >= this.x && v.x <= this.x + this.largura && v.y >= this.y && v.y <= this.y + this.altura) {
-                    return true;
+                    colidiu = true;
                 }
             });
-            return false;
+            return colidiu;
         }
     }
 
