@@ -147,13 +147,13 @@ window.onload = function () {
         switch (controle) {
             case 1:
                 switch (tecla) {
-                    case 'a':
+                    case 'KeyA':
                         return 'esquerda';
-                    case 's':
+                    case 'KeyS':
                         return 'baixo';
-                    case 'd':
+                    case 'KeyD':
                         return 'direita';
-                    case 'w':
+                    case 'KeyW':
                         return 'cima';
                 }
                 break;
@@ -201,12 +201,12 @@ window.onload = function () {
 
     let teclas = [];
     addEventListener('keydown', evento => {
-        if (!teclas.includes(evento.key))
-            teclas.push(evento.key);
+        if (!teclas.includes(evento.code))
+            teclas.push(evento.code);
     });
 
     addEventListener('keyup', evento => {
-        teclas.splice(teclas.indexOf(evento.key), 1);
+        teclas.splice(teclas.indexOf(evento.code), 1);
     });
 
     let impactos = 0;
