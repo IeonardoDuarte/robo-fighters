@@ -51,9 +51,9 @@ window.onload = function () {
         }
 
         // A função colisão verifica se algum dos vertices do objeto externo está dentro da área desse objeto.
-        colisao(vertices) {
+        colisao(objRetangular) {
             let colidiu = false;
-            vertices.forEach(v => {
+            objRetangular.vertices.forEach(v => {
                 if (v.x >= this.x && v.x <= this.x + this.largura && v.y >= this.y && v.y <= this.y + this.altura) {
                     colidiu = true;
                 }
@@ -102,7 +102,7 @@ window.onload = function () {
 
     function animar() {
         atualizaHud();
-        if (jogador1.colisao(jogador2.vertices) || jogador2.colisao(jogador1.vertices)) {
+        if (jogador1.colisao(jogador2) || jogador2.colisao(jogador1)) {
             // TODO - Colocar animação de impcto
 
             impactos++;
