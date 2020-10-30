@@ -63,17 +63,18 @@ window.onload = function () {
     }
 
     class Jogador extends ObjRetangular {
-        constructor(x, y, largura, altura, cor) {
+        constructor(x, y, largura, altura, cor, direcaoSprite) {
             super(x, y, largura, altura, cor);
             this.xInicial = x;
             this.yInicial = y;
             this.vida = 100;
+            this.direcaoSprite = direcaoSprite;
         }
 
-        andar(direcao) {
+        andar(sentido) {
             this.atualizaVertices();
             let vel = 1;
-            switch (direcao) {
+            switch (sentido) {
                 case 'esquerda':
                     if (this.x >= 0)
                         this.x -= vel;
@@ -97,6 +98,12 @@ window.onload = function () {
             this.x = this.xInicial;
             this.y = this.yInicial;
             this.atualizaVertices();
+        }
+
+        desenhar() {
+            let robo = new Image();
+            robo.src = `../img/robo_${this.cor}_${this.direcaoSprite}.png`;
+            ctx.drawImage(robo, this.x, this.y, this.largura, this.altura);
         }
     }
 
@@ -132,9 +139,16 @@ window.onload = function () {
             requestAnimationFrame(animar)
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             teclas.forEach(tecla => {
+                if (movimento(tecla, 1) != undefined) {
+                    jogador1.direcaoSprite = movimento(tecla, 1);
+                }
                 jogador1.andar(movimento(tecla, 1));
+                if (movimento(tecla, 2) != undefined) {
+                    jogador2.direcaoSprite = movimento(tecla, 2);
+                }
                 jogador2.andar(movimento(tecla, 2));
             });
+
 
             jogador1.desenhar();
             jogador2.desenhar();
@@ -196,8 +210,8 @@ window.onload = function () {
         y: canvas.height / 2 - tamanhoJogadores / 2
     }
 
-    const jogador1 = new Jogador(posIniJog1.x, posIniJog1.y, tamanhoJogadores, tamanhoJogadores, 'blue');
-    const jogador2 = new Jogador(posIniJog2.x, posIniJog2.y, tamanhoJogadores, tamanhoJogadores, 'orange');
+    const jogador1 = new Jogador(posIniJog1.x, posIniJog1.y, tamanhoJogadores, tamanhoJogadores, 'azul', "direita");
+    const jogador2 = new Jogador(posIniJog2.x, posIniJog2.y, tamanhoJogadores, tamanhoJogadores, 'laranja', "esquerda");
 
     let teclas = [];
     addEventListener('keydown', evento => {
