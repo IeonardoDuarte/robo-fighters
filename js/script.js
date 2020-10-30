@@ -64,6 +64,7 @@ window.onload = function () {
         }
     }
 
+
     class Jogador extends ObjRetangular {
         constructor(x, y, largura, altura, cor, direcaoSprite) {
             super(x, y, largura, altura, cor);
