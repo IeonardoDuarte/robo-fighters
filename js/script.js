@@ -13,6 +13,7 @@ window.onload = function () {
             this.largura = largura;
             this.altura = altura;
             this.cor = cor;
+            // Um array de vertices contendo as coordenas no plano cartesiano de cada uma delas
             this.vertices = [{
                 x: this.x,
                 y: this.y
@@ -33,6 +34,7 @@ window.onload = function () {
             ctx.fillRect(this.x, this.y, this.altura, this.largura);
         }
 
+        // A função colisão verifica se algum dos vertices do objeto externo está dentro da área desse objeto.
         colisao(vertices) {
             let colidiu = false;
             vertices.forEach(v => {
