@@ -4,7 +4,9 @@ window.onload = function () {
     let vidaJogador1 = document.querySelector('.barra-vida-jogador1');
     let vidaJogador2 = document.querySelector('.barra-vida-jogador2');
     let placarImpactos = document.querySelector('.impactos');
-    let resultado = document.querySelector('.resultado');
+    let resultado = document.querySelector('.modal-body');
+    let modal = document.querySelector('.modal');
+    const btnFimDeJogo = document.querySelector('.btn-fim-de-jogo');
 
     class ObjRetangular {
         constructor(x, y, largura, altura, cor) {
@@ -120,13 +122,21 @@ window.onload = function () {
 
             atualizaHud();
             if (impactos >= 5) {
-                if (jogador1.vida > jogador2.vida)
+                modal.style.display = "block";
+                if (jogador1.vida > jogador2.vida) {
                     resultado.innerHTML = "Jogador 1 ganhou!";
-                else if (jogador2.vida > jogador1.vida)
+                    btnFimDeJogo.classList.add('btn-primary');
+                } else if (jogador2.vida > jogador1.vida) {
                     resultado.innerHTML = "Jogador 2 ganhou!";
-                else
+                    btnFimDeJogo.classList.add('btn-warning');
+                } else
                     resultado.innerHTML = "Empate!";
                 impactos = 0;
+                btnFimDeJogo.onclick = () => {
+                    location.reload();
+                }
+
+
             } else {
                 jogador1.reposicionar();
                 jogador2.reposicionar();
