@@ -29,6 +29,22 @@ window.onload = function () {
             }]
         }
 
+        atualizaVertices() {
+            this.vertices = [{
+                x: this.x,
+                y: this.y
+            }, {
+                x: this.x + this.largura,
+                y: this.y
+            }, {
+                x: this.x + this.largura,
+                y: this.y + this.altura
+            }, {
+                x: this.x,
+                y: this.y + this.altura
+            }]
+        }
+
         desenhar() {
             ctx.fillStyle = this.cor;
             ctx.fillRect(this.x, this.y, this.altura, this.largura);
@@ -55,19 +71,7 @@ window.onload = function () {
         }
 
         andar(direcao) {
-            this.vertices = [{
-                x: this.x,
-                y: this.y
-            }, {
-                x: this.x + this.largura,
-                y: this.y
-            }, {
-                x: this.x + this.largura,
-                y: this.y + this.altura
-            }, {
-                x: this.x,
-                y: this.y + this.altura
-            }];
+            this.atualizaVertices();
             let vel = 1;
             switch (direcao) {
                 case 'esquerda':
@@ -92,19 +96,7 @@ window.onload = function () {
         reposicionar() {
             this.x = this.xInicial;
             this.y = this.yInicial;
-            this.vertices = [{
-                x: this.x,
-                y: this.y
-            }, {
-                x: this.x + this.largura,
-                y: this.y
-            }, {
-                x: this.x + this.largura,
-                y: this.y + this.altura
-            }, {
-                x: this.x,
-                y: this.y + this.altura
-            }];
+            this.atualizaVertices();
         }
     }
 
