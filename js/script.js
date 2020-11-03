@@ -6,6 +6,7 @@ window.onload = function () {
     let placarImpactos = document.querySelector('.impactos');
     let resultado = document.querySelector('.modal-body');
     let modal = document.querySelector('.modal');
+    let modalFinal = document.querySelector('.modal-content');
     const btnFimDeJogo = document.querySelector('.btn-fim-de-jogo');
 
     class ObjRetangular {
@@ -127,9 +128,11 @@ window.onload = function () {
                 if (jogador1.vida > jogador2.vida) {
                     resultado.innerHTML = "Jogador 1 ganhou!";
                     btnFimDeJogo.classList.add('btn-primary');
+                    modalFinal.classList.add('jogador1-ganhador');
                 } else if (jogador2.vida > jogador1.vida) {
                     resultado.innerHTML = "Jogador 2 ganhou!";
                     btnFimDeJogo.classList.add('btn-warning');
+                    modalFinal.classList.add('jogador2-ganhador');
                 } else
                     resultado.innerHTML = "Empate!";
                 impactos = 0;

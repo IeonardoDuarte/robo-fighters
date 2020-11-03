@@ -70,19 +70,19 @@ p {
 }
 
 
-.modal-content {
+.jogador1-ganhador {
     /* TIME AZUL */
-
-     /* background: rgb(25,95,255); */
-      background: linear-gradient(120deg, rgba(25,95,255,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,1) 100%);
-
- /* TIMA LARANJA */
-
-background: rgb(255,142,25);
-background: linear-gradient(120deg, rgba(255,142,25,1) 58%, rgba(255,255,255,1) 100%);
+    background: rgb(25, 95, 255);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(58, 67, 190, 1) 0%, rgba(109, 115, 236, 1) 90.1%);
 }
 
-.modal{
+.jogador2-ganhador {
+    /* TIMA LARANJA */
+    background: rgb(255, 142, 25);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 131, 61, 1) 0%, rgba(249, 183, 23, 1) 90%);
+}
+
+.modal {
     font-family: 'Turret Road', cursive;
     /* color: #ffffff; */
     color: #000000;
