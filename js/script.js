@@ -105,7 +105,7 @@ window.onload = function () {
 
         desenhar() {
             let robo = new Image();
-            robo.src = `../img/robo_${this.cor}_${this.direcaoSprite}.png`;
+            robo.src = `img/robo_${this.cor}_${this.direcaoSprite}.png`;
             ctx.drawImage(robo, this.x, this.y, this.largura, this.altura);
         }
     }
