@@ -70,3 +70,23 @@ p {
     box-shadow: 13px 18px 17px 0px rgba(0, 0, 0, 0.75);
 
 }
+
+
+.modal-content {
+    /* TIME AZUL */
+
+     /* background: rgb(25,95,255); */
+      background: linear-gradient(120deg, rgba(25,95,255,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,1) 100%);
+
+ /* TIMA LARANJA */
+
+background: rgb(255,142,25);
+background: linear-gradient(120deg, rgba(255,142,25,1) 58%, rgba(255,255,255,1) 100%);
+}
+
+.modal{
+    font-family: 'Turret Road', cursive;
+    /* color: #ffffff; */
+    color: #000000;
+    font-weight: bold;
+}

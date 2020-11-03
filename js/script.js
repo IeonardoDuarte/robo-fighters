@@ -122,7 +122,7 @@ window.onload = function () {
 
 
             atualizaHud();
-            if (impactos >= 5) {
+            if (impactos >= 1) {
                 modal.style.display = "block";
                 if (jogador1.vida > jogador2.vida) {
                     resultado.innerHTML = "Jogador 1 ganhou!";
