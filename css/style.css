@@ -60,8 +60,6 @@ p {
 }
 
 .palco {
-    width: 960px;
-    height: 500px;
     background-color: #000000;
     margin: 0 auto;
     /* Sombra da div */

@@ -76,7 +76,7 @@ window.onload = function () {
 
         andar(sentido) {
             this.atualizaVertices();
-            let vel = 1;
+            let vel = 3;
             switch (sentido) {
                 case 'esquerda':
                     if (this.x >= 0)
@@ -122,7 +122,7 @@ window.onload = function () {
 
 
             atualizaHud();
-            if (impactos >= 5) {
+            if (impactos >= 1) {
                 modal.style.display = "block";
                 if (jogador1.vida > jogador2.vida) {
                     resultado.innerHTML = "Jogador 1 ganhou!";
@@ -209,7 +209,7 @@ window.onload = function () {
         placarImpactos.innerHTML = `Impactos ${impactos}`;
     }
 
-    let tamanhoJogadores = 20;
+    let tamanhoJogadores = 80;
 
     let posIniJog1 = {
         x: 10,
